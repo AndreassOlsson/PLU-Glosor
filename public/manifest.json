@@ -1,0 +1,9 @@
+{
+    "name": "pluglosor",
+    "short_name": "plu",
+    "start_url": "/?home=true",
+    "theme_color": "#000000",
+    "background_color": "#FFFFFF",
+    "display": "fullscreen",
+    "orientation": "portrait"
+  }

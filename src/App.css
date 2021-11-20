@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  --primary-light: #55d97d;
+  --primary-extraLight: #bbf5cc;
+  --primary-extremelyLight: #effcf3;
+  --primary-extremelyLight2: rgb(234, 255, 234);
+  --primary-main: #02a64f;
+  --primary-dark: #007623;
+  --primary-contrastText: #fff;
+
+  --primary-error: #f44336;
+  --primary-errorLight: #f89d96;
+  --primary-errorExtraLight: #f5cdca;
+
+  --primary-errorWarningDark: #ff8a04;
+  --primary-errorWarning: #e27603;
+  --primary-errorWarningLight: #e2890396;
+
+  --primary-border: #33aa57;
+  --primary-background: #9ef5b8;
+
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.highlight {
+  color: var(--primary-main);
+  font-weight: bold;
+}
+
+.highlight-warning {
+  color: var(--primary-errorWarning);
+  font-weight: bold;
+}
+
+.highlight-danger {
+  color: var(--primary-error);
+  font-weight: bold;
+}
+
+.subtle {
+  font-weight: 300;
+  margin-left: 6px;
+}
+
+.noCursorPointer {
+  cursor: default;
+}
+
+.fas {
+  cursor: pointer;
+}
+
+.noHighlight {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.noBorder {
+  border: none;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    max-width: 300px;
+  }
+}

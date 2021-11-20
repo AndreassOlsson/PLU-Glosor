@@ -1,0 +1,227 @@
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80vw;
+}
+
+.difficulty {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  margin: 42px 0 12px 0;
+}
+
+.labels {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  padding-left: 0;
+  width: 300px;
+  margin: 12px 0;
+}
+
+input[type='range'] {
+  overflow: hidden;
+  height: 12px;
+  width: 275px;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border-radius: 12px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 12px;
+  width: 12px;
+  -webkit-appearance: none;
+  background-color: rgb(234, 255, 234);
+  margin-left: 24px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 12px;
+  -webkit-appearance: none;
+  height: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+
+  background-color: var(--primary-dark);
+  box-shadow: -140px 0px 0px 134px var(--primary-light);
+}
+
+#passedRange::-webkit-slider-runnable-track {
+  background-color: rgb(255, 242, 234);
+}
+
+#passedRange::-webkit-slider-thumb {
+  background-color: var(--primary-errorWarningDark);
+  box-shadow: -140px 0px 0px 134px var(--primary-errorWarningLight);
+}
+
+li {
+  font-weight: 500;
+}
+
+.listWrapper .highlight {
+  font-weight: 900;
+}
+
+.fas {
+  margin-left: 6px;
+}
+
+.listCard {
+  max-width: 500px;
+  width: 80vw;
+  position: absolute;
+  background-color: var(--primary-extremelyLight);
+  height: 80%;
+  border-radius: 40px;
+  box-shadow: 10px 10px 100px #4aca3070;
+  box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--primary-dark);
+  border: 2px solid black;
+  background-color: white;
+  padding: 0 0px;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 24px 48px 0 48px;
+}
+
+.fas-container {
+  display: flex;
+  justify-content: flex-end;
+  height: 24px;
+  width: 100%;
+}
+
+#closeButton {
+  position: relative;
+  top: 0px;
+  right: -24px;
+  width: 24px;
+  height: 100%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  z-index: 1;
+  overflow: hidden;
+  color: grey;
+}
+
+#QClose {
+  position: relative;
+  top: -12px;
+  right: -12px;
+  width: 24px;
+  height: 100%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  z-index: 1;
+  overflow: hidden;
+  color: grey;
+}
+
+#difficulty {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.useSame {
+  filter: grayscale(100%);
+}
+
+input[type='checkbox'] {
+  margin-left: 6px;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+
+.greyText {
+  color: grey;
+  margin: 0 6px;
+}
+
+.nonSelectedDiff {
+  color: rgb(209, 209, 209);
+}
+
+label {
+  cursor: pointer;
+}
+input {
+  cursor: pointer;
+}
+
+.selectedDiff {
+  font-weight: bold;
+}
+
+li.previewItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 16px auto;
+  padding: 6px 12px;
+  font-weight: 500;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+  .listCard {
+    width: 90vw;
+    padding: 24px 12px 0 12px;
+  }
+  .flexColumn {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  span.previewQ {
+    max-width: 140px;
+    max-height: 24px;
+    white-space: nowrap;
+    text-overflow: clip;
+    overflow-y: scroll;
+    overflow-x: auto;
+    text-align: left;
+  }
+  i#closeButton {
+    top: 0px;
+    right: 12px;
+  }
+}
+
+li.previewHeader {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+}
+
+#check {
+  margin-left: -22px;
+  margin-right: 6px;
+}
+#cross {
+  margin-left: -20px;
+  margin-right: 9px;
+}

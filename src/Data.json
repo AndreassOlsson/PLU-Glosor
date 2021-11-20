@@ -1,0 +1,129 @@
+{
+    "data": [
+        {
+            "question": "Bananer",
+            "answer": "94011",
+            "imgLink": "img/Bananas.png"
+        },
+        {
+            "question": "Lök Gul",
+            "answer": "4666",
+            "imgLink": "img/Onion.png"
+        },
+        {
+            "question": "Äpple Granny Smith",
+            "answer": "4136",
+            "imgLink": "img/GrannySmith.png"
+        },
+        {
+            "question": "Tomater Svenska",
+            "answer": "4806",
+            "imgLink": "img/Tomato.png"
+        },
+        {
+            "question": "Vitlök",
+            "answer": "4608",
+            "imgLink": "img/Garlic.png"
+        },
+        {
+            "question": "Grapefruit",
+            "answer": "3031",
+            "imgLink": "img/Grapefruit.png"
+        },
+        {
+            "question": "Picadeli Sallad",
+            "answer": "903",
+            "imgLink": "img/Picadeli.png"
+        },
+        {
+            "question": "Ingefära",
+            "answer": "4612",
+            "imgLink": "img/Ginger.png"
+        },
+        {
+            "question": "Tomater Kvist Svenska",
+            "answer": "4807",
+            "imgLink": "img/TomatoBranch.png"
+        },
+        {
+            "question": "Gurka Svensk",
+            "answer": "4268",
+            "imgLink": "img/Cucumber.png"
+        },
+        {
+            "question": "Apelsin",
+            "answer": "4389",
+            "imgLink": "img/Orange.png"
+        },
+        {
+            "question": "Äpple Royal Gala",
+            "answer": "4134",
+            "imgLink": "img/RoyalGala.png"
+        },        
+        {
+            "question": "Räkor Frysta",
+            "answer": "111",
+            "imgLink": "img/Shrimp.png"
+        },
+        {
+            "question": "Potatis Bak",
+            "answer": "2931",
+            "imgLink": "img/PotatoBaking.png"
+        },
+        {
+            "question": "Godis Lösvikt",
+            "answer": "34",
+            "imgLink": "img/Candy.png"
+        },
+        {
+            "question": "Naturgodis Lösvikt",
+            "answer": "35",
+            "imgLink": "img/NatureCandy.png"
+        },
+        {
+            "question": "Lime",
+            "answer": "2948",
+            "imgLink": "img/Lime.png"
+        },
+        {
+            "question": "Citron",
+            "answer": "2958",
+            "imgLink": "img/Lemon.png"
+        },
+        {
+            "question": "Avokado Mogen",
+            "answer": "4046",
+            "imgLink": "img/Avocado.png"
+        },
+        {
+            "question": "Paprika Röd",
+            "answer": "3195",
+            "imgLink": "img/Paprika.png"
+        },
+        {
+            "question": "Vitkål",
+            "answer": "3050",
+            "imgLink": "img/Cabbage.png"
+        },
+        {
+            "question": "Lök Röd",
+            "answer": "4082",
+            "imgLink": "img/OnionRed.png"
+        },
+        {
+            "question": "Potatis Fast",
+            "answer": "4728",
+            "imgLink": "img/Potato.png"
+        },
+        {
+            "question": "Potatis Mjölig",
+            "answer": "4083",
+            "imgLink": "img/Potato.png"
+        },
+        {
+            "question": "Satsumas",
+            "answer": "3029",
+            "imgLink": "img/Satsumas.png"
+        }
+    ]
+}
