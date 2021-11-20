@@ -137,3 +137,10 @@ img {
     max-height: 160px;
   }
 }
+
+@media screen and (max-width: 499px) {
+  .before:hover {
+    border: 2px solid var(--primary-dark);
+    background-color: white;
+  }
+}
