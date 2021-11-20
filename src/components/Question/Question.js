@@ -40,6 +40,7 @@ const Question = ({
         findCheckedInput.checked = false;
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, difficulty]);
 
   // DIFFICULTY
