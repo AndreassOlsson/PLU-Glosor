@@ -42,8 +42,11 @@
 }
 
 img {
-  margin: 36px 0;
-  max-height: 200px;
+  margin: 36px 0 36px 0;
+  float: left;
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
 }
 
 .options {

@@ -205,7 +205,7 @@ const Question = ({
           <Typography variant='h4'>{data.question}</Typography>
         </div>
 
-        <img src={data.imgLink} alt='test' height='180' />
+        <img src={data.imgLink} alt='test' />
         {difficulty === 1 && (
           <Fragment>
             <div ref={radiosWrapper} className='options'>
