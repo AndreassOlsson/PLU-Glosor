@@ -42,10 +42,10 @@
 }
 
 img {
-  margin: 36px 0 36px 0;
+  margin: 24px 0 24px 0;
   float: left;
   width: 200px;
-  height: 150px;
+  height: 160px;
   object-fit: contain;
 }
 
