@@ -146,4 +146,9 @@ img {
     border: 2px solid var(--primary-dark);
     background-color: white;
   }
+  img {
+    width: calc(200px * 0.8);
+    height: calc(160px * 0.8);
+    margin: 24px 0 12px 0;
+  }
 }

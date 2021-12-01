@@ -190,9 +190,11 @@ li.previewItem {
     padding: 24px 12px 0 12px;
   }
   .flexColumn {
-    width: 85%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .adpt {
+    width: 85%;
   }
   span.previewQ {
     max-width: 140px;
@@ -206,6 +208,15 @@ li.previewItem {
   i#closeButton {
     top: 0px;
     right: 12px;
+  }
+  .difficulty {
+    width: 250px;
+  }
+  input[type='range'] {
+    width: 250px;
+  }
+  ul.labels {
+    width: 280px;
   }
 }
 

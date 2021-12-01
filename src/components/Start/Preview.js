@@ -27,7 +27,7 @@ const Preview = ({
         <Typography variant='h6' style={{ marginTop: 24 }}>
           Antal frågor:<span className='subtle'>({origLength})</span>
         </Typography>
-        <div className='flexColumn'>
+        <div className='flexColumn adpt'>
           <p className='greyText'>0</p>
           <input
             type='range'
