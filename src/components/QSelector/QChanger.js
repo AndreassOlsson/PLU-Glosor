@@ -95,7 +95,7 @@ const QChanger = ({
           <div className='difficulty' id='difficulty'>
             <input
               type='range'
-              defaultValue={localDiff}
+              value={localDiff}
               min={1}
               max={3}
               step={1}
@@ -104,16 +104,19 @@ const QChanger = ({
             <ul className='labels'>
               <li
                 className={localDiff === 1 ? 'selectedDiff' : 'nonSelectedDiff'}
+                onClick={() => onSetLocalDiff(1)}
               >
                 Nybörjare
               </li>
               <li
                 className={localDiff === 2 ? 'selectedDiff' : 'nonSelectedDiff'}
+                onClick={() => onSetLocalDiff(2)}
               >
                 Rutinerad
               </li>
               <li
                 className={localDiff === 3 ? 'selectedDiff' : 'nonSelectedDiff'}
+                onClick={() => onSetLocalDiff(3)}
               >
                 Proffs
               </li>
@@ -136,7 +139,7 @@ const QChanger = ({
             onClick={() => customStart()}
           >
             <span className='diffSpan'>Starta quiz</span>
-            <span className='subtle'>({origLength})</span>
+            <span className='subtle'>({localBatchSize})</span>
           </Button>
         </div>
       ) : (
@@ -165,7 +168,7 @@ const QChanger = ({
               <input
                 type='range'
                 id='passedRange'
-                defaultValue={localDiff}
+                value={localDiff}
                 min={1}
                 max={3}
                 step={1}
@@ -176,6 +179,7 @@ const QChanger = ({
                   className={
                     localDiff === 1 ? 'selectedDiff' : 'nonSelectedDiff'
                   }
+                  onClick={() => onSetLocalDiff(1)}
                 >
                   Nybörjare
                 </li>
@@ -183,11 +187,13 @@ const QChanger = ({
                   className={
                     localDiff === 2 ? 'selectedDiff' : 'nonSelectedDiff'
                   }
+                  onClick={() => onSetLocalDiff(1)}
                 >
                   Rutinerad
                 </li>
                 <li
                   className={localDiff > 2 ? 'selectedDiff' : 'nonSelectedDiff'}
+                  onClick={() => onSetLocalDiff(1)}
                 >
                   Proffs
                 </li>
@@ -210,7 +216,7 @@ const QChanger = ({
               onClick={() => customStart()}
             >
               <span className='diffSpan'>Starta quiz</span>
-              <span className='subtle'>({origLength})</span>
+              <span className='subtle'>({localBatchSize})</span>
             </Button>
           </div>
         </ThemeProvider>

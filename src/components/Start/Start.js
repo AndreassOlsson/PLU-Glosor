@@ -38,20 +38,29 @@ const Start = ({
       <div className='difficulty'>
         <input
           type='range'
-          defaultValue={1}
+          value={difficulty}
           min={1}
           max={3}
           step={1}
           onChange={changeHandler}
         />
         <ul className='labels'>
-          <li className={difficulty === 1 ? 'selectedDiff' : 'nonSelectedDiff'}>
+          <li
+            className={difficulty === 1 ? 'selectedDiff' : 'nonSelectedDiff'}
+            onClick={() => onSetDifficulty(1)}
+          >
             Nybörjare
           </li>
-          <li className={difficulty === 2 ? 'selectedDiff' : 'nonSelectedDiff'}>
+          <li
+            className={difficulty === 2 ? 'selectedDiff' : 'nonSelectedDiff'}
+            onClick={() => onSetDifficulty(2)}
+          >
             Rutinerad
           </li>
-          <li className={difficulty === 3 ? 'selectedDiff' : 'nonSelectedDiff'}>
+          <li
+            className={difficulty === 3 ? 'selectedDiff' : 'nonSelectedDiff'}
+            onClick={() => onSetDifficulty(3)}
+          >
             Proffs
           </li>
         </ul>

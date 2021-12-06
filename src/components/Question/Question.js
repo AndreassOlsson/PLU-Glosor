@@ -238,14 +238,12 @@ const Question = ({
               <TextField
                 label='PLU-Kod'
                 color='secondary'
-                placeholder={
-                  data.answer.length === 5
-                    ? data.answer.substring(0, data.answer.length / 2) + '---'
-                    : data.answer.substring(0, data.answer.length / 2) + '--'
-                }
+                placeholder={data.answer}
                 value={selected}
                 onChange={changeHandler}
                 onKeyPress={handleKeyPress}
+                type='number'
+                inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
                 autoFocus
               ></TextField>
             ) : (
@@ -253,13 +251,15 @@ const Question = ({
                 label='PLU-Kod'
                 color='primary'
                 placeholder={
-                  data.answer.length === 5
-                    ? data.answer.substring(0, data.answer.length / 2) + '---'
-                    : data.answer.substring(0, data.answer.length / 2) + '--'
+                  data.answer.length === 2
+                    ? data.answer.substring(0, data.answer.length - 1) + '-'
+                    : data.answer.substring(0, data.answer.length - 2) + '--'
                 }
                 value={selected}
                 onChange={changeHandler}
                 onKeyPress={handleKeyPress}
+                type='number'
+                inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
                 autoFocus
               ></TextField>
             )}
@@ -281,13 +281,29 @@ const Question = ({
         )}
         {difficulty === 3 && (
           <div>
-            <TextField
-              label='PLU-Kod'
-              value={selected}
-              onChange={changeHandler}
-              onKeyPress={handleKeyPress}
-              autoFocus
-            ></TextField>
+            {wrongAnswers[activeQuestion] !== 0 ? (
+              <TextField
+                label='PLU-Kod'
+                color='secondary'
+                value={selected}
+                onChange={changeHandler}
+                onKeyPress={handleKeyPress}
+                type='number'
+                inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
+                autoFocus
+              ></TextField>
+            ) : (
+              <TextField
+                label='PLU-Kod'
+                color='primary'
+                value={selected}
+                onChange={changeHandler}
+                onKeyPress={handleKeyPress}
+                type='number'
+                inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
+                autoFocus
+              ></TextField>
+            )}
             {wrongAnswers[activeQuestion] !== 0 && (
               <div className='facit'>
                 <Typography variant='body2' className='flexColumn'>

@@ -139,6 +139,10 @@ img {
   img {
     max-height: 160px;
   }
+  .alert {
+    max-width: 240px;
+    overflow-wrap: break-word;
+  }
 }
 
 @media screen and (max-width: 499px) {
@@ -151,4 +155,15 @@ img {
     height: calc(160px * 0.8);
     margin: 24px 0 12px 0;
   }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
 }

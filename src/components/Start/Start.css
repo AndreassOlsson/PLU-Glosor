@@ -159,6 +159,7 @@ input[type='checkbox'] {
 
 .nonSelectedDiff {
   color: rgb(209, 209, 209);
+  cursor: pointer;
 }
 
 label {
@@ -170,6 +171,7 @@ input {
 
 .selectedDiff {
   font-weight: bold;
+  cursor: pointer;
 }
 
 li.previewItem {
