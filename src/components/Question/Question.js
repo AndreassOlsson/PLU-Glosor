@@ -159,7 +159,7 @@ const Question = ({
       wrongAnswers.splice(activeQuestion, 1, selected);
       onSetWrongAnswers(wrongAnswers);
       onSetQuizPassed(false);
-      setAlert('Skriv in rätt svar och klicka på "ENTER" för att fortsätta');
+      setAlert('Skriv in rätt svar för att fortsätta!');
     }
   };
 
@@ -321,7 +321,7 @@ const Question = ({
           </div>
         )}
         {error && <div>{error}</div>}
-        {difficulty !== 1 && wrongAnswers[activeQuestion] === 0 && (
+        {difficulty !== 1 && (
           <Button
             style={{ marginTop: 24 }}
             variant='contained'
