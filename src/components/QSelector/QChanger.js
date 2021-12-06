@@ -187,13 +187,13 @@ const QChanger = ({
                   className={
                     localDiff === 2 ? 'selectedDiff' : 'nonSelectedDiff'
                   }
-                  onClick={() => onSetLocalDiff(1)}
+                  onClick={() => onSetLocalDiff(2)}
                 >
                   Rutinerad
                 </li>
                 <li
                   className={localDiff > 2 ? 'selectedDiff' : 'nonSelectedDiff'}
-                  onClick={() => onSetLocalDiff(1)}
+                  onClick={() => onSetLocalDiff(3)}
                 >
                   Proffs
                 </li>
