@@ -33,11 +33,11 @@ const Preview = ({
             type='range'
             defaultValue={defaultValue}
             min={1}
-            max={maxQuestions}
+            max={maxQuestions - 1}
             step={1}
             onChange={changeHandler}
           />
-          <p className='greyText'>{maxQuestions}</p>
+          <p className='greyText'>{maxQuestions - 1}</p>
         </div>
 
         <ul className='previewList'>

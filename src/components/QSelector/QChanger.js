@@ -86,11 +86,11 @@ const QChanger = ({
               type='range'
               value={localBatchSize}
               min={1}
-              max={maxQuestions}
+              max={maxQuestions - 1}
               step={1}
               onChange={changeLength}
             />
-            <p className='greyText'>{maxQuestions}</p>
+            <p className='greyText'>{maxQuestions - 1}</p>
           </div>
           <div className='difficulty' id='difficulty'>
             <input
@@ -158,11 +158,11 @@ const QChanger = ({
                 id='passedRange'
                 value={localBatchSize}
                 min={1}
-                max={maxQuestions}
+                max={maxQuestions - 1}
                 step={1}
                 onChange={changeLength}
               />
-              <p className='greyText'>{maxQuestions}</p>
+              <p className='greyText'>{maxQuestions - 1}</p>
             </div>
             <div className='difficulty' id='difficulty'>
               <input
