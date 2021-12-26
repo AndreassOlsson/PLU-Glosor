@@ -6,6 +6,11 @@
             "imgLink": "img/Bananas.png"
         },
         {
+            "question": "Bananer Fairtrade",
+            "answer": "93250",
+            "imgLink": "img/Bananas.png"
+        },
+        {
             "question": "Lök Gul",
             "answer": "4666",
             "imgLink": "img/Onion.png"
@@ -16,8 +21,13 @@
             "imgLink": "img/GrannySmith.png"
         },
         {
-            "question": "Tomater Svenska",
+            "question": "Tomat SVE",
             "answer": "4806",
+            "imgLink": "img/Tomato.png"
+        },
+        {
+            "question": "Tomat UTL",
+            "answer": "4063",
             "imgLink": "img/Tomato.png"
         },
         {
@@ -41,13 +51,23 @@
             "imgLink": "img/Ginger.png"
         },
         {
-            "question": "Tomater Kvist Svenska",
+            "question": "Tomat Kvist SVE",
             "answer": "4807",
             "imgLink": "img/TomatoBranch.png"
         },
         {
-            "question": "Gurka Svensk",
+            "question": "Tomat Kvist UTL",
+            "answer": "4664",
+            "imgLink": "img/TomatoBranch.png"
+        },
+        {
+            "question": "Gurka SVE",
             "answer": "4268",
+            "imgLink": "img/Cucumber.png"
+        },
+        {
+            "question": "Gurka UTL",
+            "answer": "2998",
             "imgLink": "img/Cucumber.png"
         },
         {
@@ -123,6 +143,11 @@
         {
             "question": "Satsumas",
             "answer": "3029",
+            "imgLink": "img/Satsumas.png"
+        },
+        {
+            "question": "Clementin",
+            "answer": "4450",
             "imgLink": "img/Satsumas.png"
         }
     ]

@@ -27,6 +27,7 @@ const Question = ({
   const [selected, setSelected] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [randomChoices, setRandomChoices] = useState([]);
+  const [placeHolder, setPlaceHolder] = useState('');
   const [error, setError] = useState('');
   const [alert, setAlert] = useState('');
   const radiosWrapper = useRef();
@@ -39,6 +40,9 @@ const Question = ({
       if (findCheckedInput) {
         findCheckedInput.checked = false;
       }
+    }
+    if (difficulty === 2) {
+      handlePlaceHolder();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, difficulty]);
@@ -169,6 +173,31 @@ const Question = ({
     }
   };
 
+  const handlePlaceHolder = () => {
+    let randomIndexes = [];
+    let replaceCount = 0;
+    let str = data.answer;
+
+    if (data.answer.length !== 2) {
+      replaceCount = 2;
+    } else {
+      replaceCount = 1;
+    }
+
+    while (randomIndexes.length !== replaceCount) {
+      let randomIndex = Math.floor(Math.random() * data.answer.length);
+      if (randomIndexes.includes(randomIndex) !== true) {
+        randomIndexes.push(randomIndex);
+      }
+    }
+
+    for (let i = 0; i < randomIndexes.length; i++) {
+      str =
+        str.slice(0, randomIndexes[i]) + '-' + str.slice(randomIndexes[i] + 1);
+    }
+    setPlaceHolder(str);
+  };
+
   // ALL DIFFICULTIES
   const nextQuestion = (e) => {
     getRandomChoices();
@@ -250,11 +279,7 @@ const Question = ({
               <TextField
                 label='PLU-Kod'
                 color='primary'
-                placeholder={
-                  data.answer.length === 2
-                    ? data.answer.substring(0, data.answer.length - 1) + '-'
-                    : data.answer.substring(0, data.answer.length - 2) + '--'
-                }
+                placeholder={placeHolder}
                 value={selected}
                 onChange={changeHandler}
                 onKeyPress={handleKeyPress}
