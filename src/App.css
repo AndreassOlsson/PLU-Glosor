@@ -95,6 +95,10 @@ a {
   flex-direction: column;
 }
 
+.typeMobile {
+  justify-content: flex-start;
+}
+
 @media screen and (max-width: 600px) {
   p {
     max-width: 300px;

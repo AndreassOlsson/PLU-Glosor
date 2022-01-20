@@ -23,6 +23,7 @@ const Question = ({
   wrongAnswersIndexes,
   onSetWrongAnswersIndexes,
   onSetQuizPassed,
+  onSetTypeMobile,
 }) => {
   const [selected, setSelected] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -40,6 +41,8 @@ const Question = ({
       if (findCheckedInput) {
         findCheckedInput.checked = false;
       }
+    } else {
+      onSetTypeMobile(true);
     }
     if (difficulty === 2) {
       handlePlaceHolder();
@@ -174,27 +177,17 @@ const Question = ({
   };
 
   const handlePlaceHolder = () => {
-    let randomIndexes = [];
-    let replaceCount = 0;
     let str = data.answer;
 
     if (data.answer.length !== 2) {
-      replaceCount = 2;
-    } else {
-      replaceCount = 1;
-    }
-
-    while (randomIndexes.length !== replaceCount) {
-      let randomIndex = Math.floor(Math.random() * data.answer.length);
-      if (randomIndexes.includes(randomIndex) !== true) {
-        randomIndexes.push(randomIndex);
+      str = str.slice(0, 2);
+      for (let i = 0; i < data.answer.length - 2; i++) {
+        str = str + '-';
       }
+    } else {
+      str = str.slice(0, 1) + '-';
     }
 
-    for (let i = 0; i < randomIndexes.length; i++) {
-      str =
-        str.slice(0, randomIndexes[i]) + '-' + str.slice(randomIndexes[i] + 1);
-    }
     setPlaceHolder(str);
   };
 

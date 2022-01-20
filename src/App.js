@@ -31,6 +31,7 @@ function App() {
   const [showAlert, setShowAlert] = useState(true);
   const [firstTry, setFirstTry] = useState(true);
   const [quizPassed, setQuizPassed] = useState(true);
+  const [typeMobile, setTypeMobile] = useState(false);
   const [time, setTime] = useState(0);
 
   useEffect(() => {
@@ -136,7 +137,7 @@ function App() {
 
   return (
     <ThemeProvider theme={Theme}>
-      <div className='App'>
+      <div className={typeMobile ? 'App typeMobile' : 'App'}>
         {step === 1 && (
           <Start
             onQuizStart={quizStartHandler}
@@ -173,6 +174,7 @@ function App() {
             wrongAnswersIndexes={wrongAnswersIndexes}
             onSetWrongAnswersIndexes={setWrongAnswersIndexes}
             onSetQuizPassed={setQuizPassed}
+            onSetTypeMobile={setTypeMobile}
           />
         )}
         {step === 3 && quizPassed && firstTry && (
