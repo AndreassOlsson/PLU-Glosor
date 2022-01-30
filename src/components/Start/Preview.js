@@ -1,9 +1,7 @@
 import React, { Fragment, useState } from 'react';
 
-import Typography from '@mui/material/Typography';
-
 import '../../App.css';
-import './Start.css';
+import '../../Components.css';
 
 const Preview = ({
   onClose,
@@ -20,34 +18,32 @@ const Preview = ({
 
   return (
     <Fragment>
-      <div className='listCard'>
-        <div className='fas-container'>
-          <i id='closeButton' className='fas fa-times' onClick={onClose}></i>
-        </div>
-        <Typography variant='h6' style={{ marginTop: 24 }}>
-          Antal frågor:<span className='subtle'>({origLength})</span>
-        </Typography>
-        <div className='flexColumn adpt'>
-          <p className='greyText'>0</p>
-          <input
-            type='range'
-            defaultValue={defaultValue}
-            min={1}
-            max={maxQuestions - 1}
-            step={1}
-            onChange={changeHandler}
-          />
-          <p className='greyText'>{maxQuestions - 1}</p>
-        </div>
+      <div className='content-card'>
+        <i className='fas fa-times closeBtn' onClick={onClose}></i>
+        <div className='content-card-content'>
+          <h5 className='header italic'>Antal frågor: {origLength}</h5>
+          <div className='lengthSelection input-range-smaller'>
+            <p className='lengthSelection-label'>0</p>
+            <input
+              type='range'
+              defaultValue={defaultValue}
+              min={1}
+              max={maxQuestions - 1}
+              step={1}
+              onChange={changeHandler}
+            />
+            <p className='lengthSelection-label'>{maxQuestions - 1}</p>
+          </div>
 
-        <ul className='previewList'>
-          {data.map((item, index) => (
-            <li key={index} className='previewItem'>
-              <span className='previewQ'>{item.question}</span>
-              <span className='previewA'>{item.answer}</span>
-            </li>
-          ))}
-        </ul>
+          <ul className='unordered-list'>
+            {data.map((item, index) => (
+              <li key={index} className='listItem'>
+                <span>{item.question}</span>
+                <span>{item.answer}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </Fragment>
   );

@@ -1,15 +1,12 @@
 import React from 'react';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 
 import '../../App.css';
-import './Start.css';
+import '../../Components.css';
 
 const Start = ({
   onQuizStart,
   difficulty,
   onSetDifficulty,
-  length,
   onPreviewCheck,
 }) => {
   const changeHandler = (e) => {
@@ -17,25 +14,16 @@ const Start = ({
   };
 
   return (
-    <div className='start'>
-      <Typography variant='h3' style={{ marginBottom: 50 }}>
-        Välkommen
-      </Typography>
-      <Typography
-        variant='body1'
-        style={{
-          marginBottom: 12,
-          textAlign: 'center',
-          maxWidth: 550,
-        }}
-      >
+    <div className='content-standard'>
+      <h3 className='header-xl'>Välkommen</h3>
+      <p className='textfield'>
         Det här är en quiz på PLU-Koder som gör dig redo för kassan! Välj bara{' '}
         {''}
-        <span className='highlight'>svårighetsgrad</span> och
-        <span className='highlight'> starta quizen!</span>
-      </Typography>
+        <span className='highlight primary'>svårighetsgrad</span> och
+        <span className='highlight primary'> starta quizen!</span>
+      </p>
 
-      <div className='difficulty'>
+      <div className='diffSelection'>
         <input
           type='range'
           value={difficulty}
@@ -44,50 +32,48 @@ const Start = ({
           step={1}
           onChange={changeHandler}
         />
-        <ul className='labels'>
-          <li
-            className={difficulty === 1 ? 'selectedDiff' : 'nonSelectedDiff'}
+        <div className='diffSelection-labels'>
+          <p
+            className={
+              difficulty === 1
+                ? 'highlight primary-darker interactive adjustLeftLabel'
+                : 'discrete interactive adjustLeftLabel'
+            }
             onClick={() => onSetDifficulty(1)}
           >
             Nybörjare
-          </li>
-          <li
-            className={difficulty === 2 ? 'selectedDiff' : 'nonSelectedDiff'}
+          </p>
+          <p
+            className={
+              difficulty === 2
+                ? 'highlight primary-darker interactive'
+                : 'discrete interactive'
+            }
             onClick={() => onSetDifficulty(2)}
           >
-            Rutinerad
-          </li>
-          <li
-            className={difficulty === 3 ? 'selectedDiff' : 'nonSelectedDiff'}
+            JIHAD
+          </p>
+          <p
+            className={
+              difficulty === 3
+                ? 'highlight primary-darker interactive adjustRightLabel'
+                : 'discrete interactive adjustRightLabel'
+            }
             onClick={() => onSetDifficulty(3)}
           >
-            Proffs
-          </li>
-        </ul>
+            BANGBANG
+          </p>
+        </div>
       </div>
 
-      <Button
-        style={{ marginTop: 12 }}
-        variant='contained'
-        color='primary'
-        onClick={onQuizStart}
-      >
-        <span className='diffSpan'>Starta Quiz</span>
-        <span className='subtle'>({length})</span>
-      </Button>
-      <Button
-        style={{
-          marginRight: 3,
-          marginLeft: 3,
-          marginBottom: 6,
-          marginTop: 8,
-        }}
-        variant='outlined'
-        color='primary'
-        onClick={onPreviewCheck}
-      >
-        Visa frågor
-      </Button>
+      <div className='btns'>
+        <button className='btn-contained' onClick={onQuizStart}>
+          STARTA QUIZ
+        </button>
+        <button className='btn-outlined' onClick={onPreviewCheck}>
+          VISA FRÅGOR
+        </button>
+      </div>
     </div>
   );
 };

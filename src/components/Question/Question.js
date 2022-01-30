@@ -1,11 +1,7 @@
 import React, { useState, useEffect, useRef, Fragment } from 'react';
 
 import '../../App.css';
-import './Question.css';
-
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
+import '../../Components.css';
 
 const Question = ({
   data,
@@ -17,20 +13,17 @@ const Question = ({
   difficulty,
   onSetWrongAnswers,
   wrongAnswers,
-  showAlert,
-  onSetShowAlert,
   allQuestions,
   wrongAnswersIndexes,
   onSetWrongAnswersIndexes,
   onSetQuizPassed,
-  onSetTypeMobile,
+  onSetBg,
 }) => {
   const [selected, setSelected] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [randomChoices, setRandomChoices] = useState([]);
   const [placeHolder, setPlaceHolder] = useState('');
   const [error, setError] = useState('');
-  const [alert, setAlert] = useState('');
   const radiosWrapper = useRef();
 
   useEffect(() => {
@@ -41,8 +34,6 @@ const Question = ({
       if (findCheckedInput) {
         findCheckedInput.checked = false;
       }
-    } else {
-      onSetTypeMobile(true);
     }
     if (difficulty === 2) {
       handlePlaceHolder();
@@ -66,6 +57,7 @@ const Question = ({
       wrongAnswers.splice(activeQuestion, 1, e.target.value);
       onSetWrongAnswers(wrongAnswers);
       onSetQuizPassed(false);
+      onSetBg('bg3');
       setTimeout(() => {
         setSubmitted(true);
         nextQuestion();
@@ -73,7 +65,7 @@ const Question = ({
     }
   };
 
-  const isMobile = () => {
+  const handleClassNameLabel = () => {
     if (window.screen.width < 600) {
       return 'optionLabel';
     } else {
@@ -84,7 +76,7 @@ const Question = ({
   const handleClassNameLabels = (i, choice) => {
     // ALL CHOICES BEFORE SELECTED ANSWER AND BEFORE WRONG ANSWER
 
-    let labelClassName = isMobile();
+    let labelClassName = handleClassNameLabel();
 
     if (
       selected === choice &&
@@ -166,7 +158,8 @@ const Question = ({
       wrongAnswers.splice(activeQuestion, 1, selected);
       onSetWrongAnswers(wrongAnswers);
       onSetQuizPassed(false);
-      setAlert('Skriv in rätt svar för att fortsätta!');
+      onSetBg('bg3');
+      setSelected('');
     }
   };
 
@@ -195,7 +188,6 @@ const Question = ({
   const nextQuestion = (e) => {
     getRandomChoices();
     setSelected('');
-    setAlert('');
     setSubmitted(false);
     if (activeQuestion < numberOfQuestions - 1) {
       onSetActiveQuestion(activeQuestion + 1);
@@ -204,16 +196,21 @@ const Question = ({
     }
   };
 
+  const isMobile = () => {
+    if (window.screen.width < 600) {
+      return 'content-standard';
+    } else {
+      return 'content-card';
+    }
+  };
+
   return (
-    <Fragment>
-      <div className='question'>
-        <Typography
-          variant='body2'
-          style={{ marginTop: 12, marginBottom: 12 }}
-          color='primary'
-        >
+    <div className={isMobile()}>
+      <div className='progress-range'>
+        <p className='primary p-question-count'>
+          {' '}
           FRÅGA {`${activeQuestion + 1} / ${numberOfQuestions}`}
-        </Typography>
+        </p>
         <input
           type='range'
           value={activeQuestion}
@@ -222,146 +219,86 @@ const Question = ({
           step={1}
           readOnly
         />
-
-        <div className='handleLongWord'>
-          <Typography variant='h4'>{data.question}</Typography>
-        </div>
-
-        <img src={data.imgLink} alt='test' />
-        {difficulty === 1 && (
-          <Fragment>
-            <div ref={radiosWrapper} className='options'>
-              {randomChoices.map((choice, i) => (
-                <label key={i} className={handleClassNameLabels(i, choice)}>
-                  <input
-                    className='optionInput'
-                    type='radio'
-                    name='answer'
-                    value={choice}
-                    onClick={(e) => handleClick(e)}
-                  />
-                  <div
-                    className={
-                      wrongAnswers[activeQuestion] !== 0
-                        ? 'choice'
-                        : 'choice choiceNotWrong'
-                    }
-                  >
-                    {choice}
-                  </div>
-                </label>
-              ))}
-            </div>
-          </Fragment>
-        )}
-        {difficulty === 2 && (
-          <div>
-            {wrongAnswers[activeQuestion] !== 0 ? (
-              <TextField
-                label='PLU-Kod'
-                color='secondary'
-                placeholder={data.answer}
-                value={selected}
-                onChange={changeHandler}
-                onKeyPress={handleKeyPress}
-                type='number'
-                inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-                autoFocus
-              ></TextField>
-            ) : (
-              <TextField
-                label='PLU-Kod'
-                color='primary'
-                placeholder={placeHolder}
-                value={selected}
-                onChange={changeHandler}
-                onKeyPress={handleKeyPress}
-                type='number'
-                inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-                autoFocus
-              ></TextField>
-            )}
-            {wrongAnswers[activeQuestion] !== 0 && (
-              <div className='facit'>
-                <Typography variant='body2' className='flexColumn'>
-                  Ditt Svar: {''}
-                  <span className='highlight-danger mL'>
-                    {wrongAnswers[activeQuestion]}
-                  </span>
-                </Typography>
-                <Typography variant='body2' className='flexColumn'>
-                  Rätt Svar: {''}
-                  <span className='highlight mL'> {data.answer}</span>
-                </Typography>
-              </div>
-            )}
-          </div>
-        )}
-        {difficulty === 3 && (
-          <div>
-            {wrongAnswers[activeQuestion] !== 0 ? (
-              <TextField
-                label='PLU-Kod'
-                color='secondary'
-                value={selected}
-                onChange={changeHandler}
-                onKeyPress={handleKeyPress}
-                type='number'
-                inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-                autoFocus
-              ></TextField>
-            ) : (
-              <TextField
-                label='PLU-Kod'
-                color='primary'
-                value={selected}
-                onChange={changeHandler}
-                onKeyPress={handleKeyPress}
-                type='number'
-                inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
-                autoFocus
-              ></TextField>
-            )}
-            {wrongAnswers[activeQuestion] !== 0 && (
-              <div className='facit'>
-                <Typography variant='body2' className='flexColumn'>
-                  Ditt Svar: {''}
-                  <span className='highlight-danger mL'>
-                    {wrongAnswers[activeQuestion]}
-                  </span>
-                </Typography>
-                <Typography variant='body2' className='flexColumn'>
-                  Rätt Svar: {''}
-                  <span className='highlight mL'> {data.answer}</span>
-                </Typography>
-              </div>
-            )}
-          </div>
-        )}
-        {error && <div>{error}</div>}
-        {difficulty !== 1 && (
-          <Button
-            style={{ marginTop: 24 }}
-            variant='contained'
-            color='primary'
-            onClick={nextClickHandler}
-          >
-            {wrongAnswers[activeQuestion] !== 0 ? 'Vidare' : 'Svara'}
-          </Button>
-        )}
       </div>
-      <span className={showAlert ? 'alert' : 'alert closeAlert'}>
-        {alert}
-        <i
-          className={
-            alert !== ''
-              ? 'fas fa-times alert'
-              : 'fas fa-times alert closeAlert'
-          }
-          onClick={(e) => onSetShowAlert(false)}
-        ></i>
-      </span>
-    </Fragment>
+
+      <h4 className='header-l header-l-question'>{data.question}</h4>
+      <img src={data.imgLink} alt='Grocery' />
+      {difficulty === 1 && (
+        <Fragment>
+          <div ref={radiosWrapper} className='multiple-choices'>
+            {randomChoices.map((choice, i) => (
+              <label key={i} className={handleClassNameLabels(i, choice)}>
+                <input
+                  className='optionInput'
+                  type='radio'
+                  name='answer'
+                  value={choice}
+                  onClick={(e) => handleClick(e)}
+                />
+                <p
+                  className={
+                    wrongAnswers[activeQuestion] !== 0
+                      ? 'choice'
+                      : 'choice choiceNotWrong'
+                  }
+                >
+                  {choice}
+                </p>
+              </label>
+            ))}
+          </div>
+        </Fragment>
+      )}
+      {(difficulty === 2 || difficulty === 3) && (
+        <Fragment>
+          {wrongAnswers[activeQuestion] === 0 ? (
+            <input
+              type='number'
+              placeholder={difficulty === 2 ? placeHolder : ''}
+              value={selected}
+              onChange={changeHandler}
+              onKeyPress={handleKeyPress}
+              autoFocus
+            ></input>
+          ) : (
+            <input
+              type='number'
+              placeholder={data.answer}
+              value={selected}
+              onChange={changeHandler}
+              onKeyPress={handleKeyPress}
+              autoFocus
+            ></input>
+          )}
+          <div className='facit-and-button'>
+            {wrongAnswers[activeQuestion] !== 0 && (
+              <div className='facit'>
+                <p className='facit-item'>
+                  Ditt Svar: {''}
+                  <span className='highlight danger'>
+                    {wrongAnswers[activeQuestion]}
+                  </span>
+                </p>
+                <p className='facit-item'>
+                  Rätt Svar: {''}
+                  <span className='highlight primary'>{data.answer}</span>
+                </p>
+              </div>
+            )}
+            <button
+              className={
+                wrongAnswers[activeQuestion] === 0
+                  ? 'btn-contained btn-question-answer'
+                  : 'btn-outlined'
+              }
+              onClick={nextClickHandler}
+            >
+              {wrongAnswers[activeQuestion] === 0 ? 'Svara' : 'Vidare'}
+            </button>
+          </div>
+        </Fragment>
+      )}
+    </div>
   );
 };
 

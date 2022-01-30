@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="master-artboard" viewBox="0 0 1920 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" style="enable-background:new 0 0 1400 980;" width="1920px" height="1080px"><defs><radialGradient id="gradient-0" gradientUnits="objectBoundingBox" cx="0.3334870934486389" cy="0.48753899335861206" r="0.5" gradientTransform="matrix(-1.6966900844918484, 1.5808832549967775, -0.7007522797132282, -2.376960437710423, 1.6808630138550174, 0.8373777814587973)">
+                <stop offset="0" style="stop-color: #effcf3"/>
+                <stop offset="1" style="stop-color: #99ecb2"/>
+              </radialGradient><linearGradient id="gradient-1" gradientUnits="userSpaceOnUse" x1="934.0858154296875" y1="-539.116943359375" x2="934.0858154296875" y2="540.8831176757812" gradientTransform="matrix(-0.4871925792912432, -0.8732952027816602, 1.7808631689736405, -0.9935030968838974, 1415.557108032108, 1358.6605668383531)">
+                <stop offset="0" style="stop-color: #02a64e"/>
+                <stop offset="1" style="stop-color: #01411f"/>
+              </linearGradient><linearGradient id="gradient-2" gradientUnits="userSpaceOnUse" x1="960" y1="0" x2="960" y2="1080" gradientTransform="matrix(-0.49115492360533775, -0.871072278763375, 1.769165048660258, -0.9975453086364817, 477.0043898088463, 1920.8166640735387)">
+                <stop offset="0" style="stop-color: #f44336"/>
+                <stop offset="1" style="stop-color: #ba160a"/>
+              </linearGradient></defs><rect id="ee-background" x="0" y="0" width="1920" height="1080" style="fill: white; fill-opacity: 0; pointer-events: none;"/><g transform="matrix(1, 0, 0, 1, 0.000060170985307195224, -3.921666973383253e-7)"><rect id="rect-1" x="0" y="0" width="1920" height="1080" style="fill: url('#gradient-2'); fill-opacity: 0.1; pointer-events: none;"/><g transform="matrix(5.000000476837158, 0, 0, 5, -2744.275859042535, 169.5465965989386)"><g id="g-5" transform="matrix(1, 0, 0, 1, 0, 0)">
+	<g id="g-6">
+		<path class="st0" d="M652,46c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S624.4,46,652,46z" style="fill: rgb(244, 67, 54); fill-opacity: 0.05;"/>
+	</g>
+</g></g><g transform="matrix(8, 0, 0, 8, -4722.164667312247, -177.42836087634814)"><g id="g-7" transform="matrix(1, 0, 0, 1, 0, 0)">
+	<g id="g-8">
+		<path class="st0" d="M652,46c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S624.4,46,652,46z" style="fill: rgb(244, 67, 54); fill-opacity: 0.07;" transform="matrix(0.8749999999999999, 0, 0, 0.8750000596046447, 55.727573142569895, 47.45795959141856)"/>
+	</g>
+</g></g><g transform="matrix(10.285715103149414, 0, 0, 10.285714149475098, -6303.571523123974, -930.3337753641113)"><g id="g-9" transform="matrix(1, 0, 0, 1, 0, 0)">
+	<g id="g-10">
+		<path class="st0" d="M652,46c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S624.4,46,652,46z" style="fill: rgb(244, 67, 54); fill-opacity: 0.03;" transform="matrix(0.8749999999999999, 0, 0, 0.8750000596046447, 55.727573142569895, 47.45795959141856)"/>
+	</g>
+</g></g><g transform="matrix(5.000000476837158, 0, 0, 5, -1455.2728896276053, -300.10335180853446)"><g id="g-1" transform="matrix(1, 0, 0, 1, 0, 0)">
+	<g id="g-2">
+		<path class="st0" d="M652,46c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S624.4,46,652,46z" style="fill: rgb(255, 70, 56); fill-opacity: 0.07;"/>
+	</g>
+</g></g><g transform="matrix(10.285715103149414, 0, 0, 10.285714149475098, -4771.622688149779, -641.7745249042375)"><g id="g-3" transform="matrix(1, 0, 0, 1, 0, 0)">
+	<g id="g-4">
+		<path class="st0" d="M652,46c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S624.4,46,652,46z" style="fill: rgb(244, 67, 54); fill-opacity: 0.06;" transform="matrix(0.8749999999999999, 0, 0, 0.8750000596046447, 55.727573142569895, 47.45795959141856)"/>
+	</g>
+</g></g><g transform="matrix(8, 0, 0, 8, -3627.4402952391893, -799.1234018573625)"><g id="g-11" transform="matrix(1, 0, 0, 1, 0, 0)">
+	<g id="g-12">
+		<path class="st0" d="M652,46c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S624.4,46,652,46z" style="fill: rgb(255, 70, 56); fill-opacity: 0.03;" transform="matrix(0.8749999999999999, 0, 0, 0.8750000596046447, 55.727573142569895, 47.45795959141856)"/>
+	</g>
+</g></g></g></svg>

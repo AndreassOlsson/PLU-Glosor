@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="master-artboard" viewBox="0 0 600 980" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" style="enable-background:new 0 0 336 235.2;" width="600px" height="980px"><defs><linearGradient id="gradient-0" gradientUnits="userSpaceOnUse" x1="130.73081970214844" y1="151.48776245117188" x2="130.73081970214844" y2="1131.48779296875" gradientTransform="matrix(-0.8534179273899962, -0.5212275245428347, 0.6064732538093864, -0.9929930007213256, 19.991620340986117, 1196.6521184291723)">
+                <stop offset="0" style="stop-color: #02a64e"/>
+                <stop offset="1" style="stop-color: #01411f"/>
+              </linearGradient><linearGradient id="gradient-1" gradientUnits="userSpaceOnUse" x1="300" y1="0" x2="300" y2="980" gradientTransform="matrix(-0.8521975836555739, -0.5232199621157088, 0.6147386789542931, -1.0012583344195058, 254.9436415343814, 1138.0887167435544)">
+                <stop offset="0" style="stop-color: #f44336"/>
+                <stop offset="1" style="stop-color: #ba160a"/>
+              </linearGradient><linearGradient id="gradient-2" gradientUnits="userSpaceOnUse" x1="300" y1="0" x2="300" y2="980" gradientTransform="matrix(-0.8542245813269094, -0.5199041887238828, 0.6075064628255519, -0.9981589734648154, 259.60178385801424, 1134.056586149427)">
+                <stop offset="0" style="stop-color: #e27603"/>
+                <stop offset="1" style="stop-color: #7d4202"/>
+              </linearGradient></defs><rect id="ee-background" x="0" y="0" width="600" height="980" style="fill: url('#gradient-2'); fill-opacity: 0.1; pointer-events: none;"/><g transform="matrix(2.5, 0, 0, 2.5, -1066.5295194043526, 39.8414382556671)"><g id="g-3" transform="matrix(1, 0, 0, 1, 0, 0)">
+	<g id="g-4">
+		<path class="st0" d="M652,46c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S624.4,46,652,46z" style="fill: rgb(255, 133, 3); fill-opacity: 0.07;"/>
+	</g>
+</g></g><g transform="matrix(3.726621150970459, 0, 0, 3.726621150970459, -2034.0209003060268, -210.2111999651445)"><g id="g-7" transform="matrix(1, 0, 0, 1, 0, 0)">
+	<g id="g-8">
+		<path class="st0" d="M652,46c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S624.4,46,652,46z" style="fill: rgb(226, 118, 3); fill-opacity: 0.03;"/>
+	</g>
+</g></g><g transform="matrix(4.28350305557251, 0, 0, 4.28350305557251, -2658.0888788686507, 456.9413831785837)"><g id="g-11" transform="matrix(1, 0, 0, 1, 60.60018599176152, -4.040012359619141)">
+	<g id="g-12">
+		<path class="st0" d="M652,46c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S624.4,46,652,46z" style="fill: rgb(255, 133, 3); fill-opacity: 0.05;"/>
+	</g>
+</g></g><g transform="matrix(6.652778148651123, 0, 0, 6.652778148651123, -4668.919356497012, 52.25467479296955)"><g id="g-1" transform="matrix(1, 0, 0, 1, 60.60018599176152, -4.040012359619141)">
+	<g id="g-2">
+		<path class="st0" d="M652,46c27.6,0,50,22.4,50,50s-22.4,50-50,50s-50-22.4-50-50S624.4,46,652,46z" style="fill: rgb(255, 133, 3); fill-opacity: 0.03;"/>
+	</g>
+</g></g></svg>

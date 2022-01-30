@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 
 import '../../App.css';
-import './EndResult.css';
 
 const Result = ({ onClose, firstTry, data, origData, wrongAnswers }) => {
   const getCustomArray = () => {
@@ -16,7 +15,87 @@ const Result = ({ onClose, firstTry, data, origData, wrongAnswers }) => {
   };
 
   return (
-    <Fragment>
+    <div className='content-card'>
+      <i className='fas fa-times closeBtn' onClick={onClose}></i>
+      <div className='content-card-content'>
+        <h5 className='header-xl'>Resultat</h5>
+        <ul className='unordered-list'>
+          {firstTry ? (
+            <Fragment>
+              {' '}
+              {data.map((item, index) => (
+                <li key={index} className='listItem'>
+                  <span
+                    className={
+                      wrongAnswers[index] === 0
+                        ? 'highlight primary'
+                        : 'highlight danger'
+                    }
+                  >
+                    {wrongAnswers[index] === 0 ? (
+                      <i className='fas fa-check'></i>
+                    ) : (
+                      <i className='fas fa-times'></i>
+                    )}
+                    {item.question}
+                  </span>
+                  <span
+                    className={
+                      wrongAnswers[index] === 0
+                        ? 'highlight primary'
+                        : 'highlight danger'
+                    }
+                  >
+                    {item.answer}
+                  </span>
+                </li>
+              ))}
+            </Fragment>
+          ) : (
+            <Fragment>
+              {data.map((item, index) => (
+                <li key={index} className='listItem'>
+                  <span
+                    className={
+                      wrongAnswers[index] === 0
+                        ? 'highlight primary'
+                        : 'highlight danger'
+                    }
+                  >
+                    {wrongAnswers[index] === 0 ? (
+                      <i className='fas fa-check'></i>
+                    ) : (
+                      <i className='fas fa-times'></i>
+                    )}
+                    {item.question}
+                  </span>
+                  <span
+                    className={
+                      wrongAnswers[index] === 0
+                        ? 'highlight primary'
+                        : 'highlight danger'
+                    }
+                  >
+                    {item.answer}
+                  </span>
+                </li>
+              ))}
+              {getCustomArray().map((item, index) => (
+                <li key={index} className='listItem'>
+                  <span className='highlight primary'>
+                    <i className='fas fa-check'></i>
+                    {item.question}
+                  </span>
+                  <span className='highlight primary'>{item.answer}</span>
+                </li>
+              ))}
+            </Fragment>
+          )}
+        </ul>
+      </div>
+    </div>
+
+    /*
       <div className='listCard'>
         <div className='fas-container'>
           <i id='closeButton' className='fas fa-times' onClick={onClose}></i>
@@ -102,7 +181,7 @@ const Result = ({ onClose, firstTry, data, origData, wrongAnswers }) => {
           )}
         </ul>
       </div>
-    </Fragment>
+*/
   );
 };
 
