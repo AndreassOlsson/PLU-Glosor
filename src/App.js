@@ -16,7 +16,7 @@ function App() {
   const [step, setStep] = useState(1);
   const [batch, setBatch] = useState([]);
   const [origBatch, setOrigBatch] = useState([]);
-  const [batchSize, setBatchSize] = useState(3);
+  const [batchSize, setBatchSize] = useState(5);
   const [difficulty, setDifficulty] = useState(1);
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [wrongAnswers, setWrongAnswers] = useState([]);

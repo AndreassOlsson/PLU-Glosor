@@ -198,7 +198,7 @@ const Question = ({
 
   const isMobile = () => {
     if (window.screen.width < 600) {
-      return 'content-standard';
+      return 'content-card-transparent';
     } else {
       return 'content-card';
     }
@@ -258,8 +258,9 @@ const Question = ({
               value={selected}
               onChange={changeHandler}
               onKeyPress={handleKeyPress}
-              pattern='\d*'
-              autoFocus
+              inputMode='numeric'
+              pattern='[0-9]*'
+              autoFocus={window.screen.width < 600 ? false : true}
             ></input>
           ) : (
             <input
@@ -268,8 +269,9 @@ const Question = ({
               value={selected}
               onChange={changeHandler}
               onKeyPress={handleKeyPress}
-              pattern='\d*'
-              autoFocus
+              inputMode='numeric'
+              pattern='[0-9]*'
+              autoFocus={window.screen.width < 600 ? false : true}
             ></input>
           )}
           <div className='facit-and-button'>
