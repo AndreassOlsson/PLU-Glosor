@@ -216,20 +216,12 @@ input[type='checkbox'] {
 }
 
 /* Footer */
-.footer {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 48px 48px 48px;
-  bottom: 0;
-  height: 24px;
-}
 .fa-home {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
   font-size: 2em;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* MOBILE */

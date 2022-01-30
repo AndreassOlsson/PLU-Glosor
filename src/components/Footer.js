@@ -1,13 +1,14 @@
 import React from 'react';
 
+import '../App.css';
+import '../Components.css';
+
 function Footer({ onReset }) {
   return (
-    <div className='footer'>
-      <i
-        className='fas fa-home interactive discrete'
-        onClick={() => onReset()}
-      ></i>
-    </div>
+    <i
+      className='fas fa-home interactive discrete'
+      onClick={() => onReset()}
+    ></i>
   );
 }
 

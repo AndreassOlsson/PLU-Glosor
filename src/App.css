@@ -250,6 +250,9 @@ a {
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
+  .App {
+    position: fixed;
+  }
   .bg1 {
     background-image: url('./img/bg1-s.svg');
   }
@@ -261,7 +264,7 @@ a {
   }
 
   .content-standard {
-    height: 90vh;
+    height: 100vh;
     transform: scale(0.8);
   }
   .content-card {
@@ -292,6 +295,6 @@ a {
     line-height: 2em;
     letter-spacing: 0.075em;
     font-weight: 550;
-    width: 70%;
+    width: 100%;
   }
 }
