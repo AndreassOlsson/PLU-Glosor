@@ -235,4 +235,11 @@ input[type='checkbox'] {
   .fa-home {
     bottom: calc(10vh + 24px);
   }
+  input[type='number'] {
+    -webkit-user-select: initial;
+    -khtml-user-select: initial;
+    -moz-user-select: initial;
+    -ms-user-select: initial;
+    user-select: initial;
+  }
 }
