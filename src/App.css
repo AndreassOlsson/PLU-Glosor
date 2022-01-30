@@ -262,10 +262,12 @@ a {
 
   .content-standard {
     height: 90vh;
+    transform: scale(0.8);
   }
   .content-card {
     padding: 24px 54px;
     border-radius: 36px;
+    transform: scale(0.8);
   }
   .content-card-content {
     height: 70vh;
@@ -279,7 +281,7 @@ a {
     width: 300px;
   }
   .header-xl {
-    width: 90%;
+    width: 95%;
   }
 
   p {
