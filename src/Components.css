@@ -232,4 +232,7 @@ input[type='checkbox'] {
   input[type='range'] {
     width: 270px;
   }
+  .fa-home {
+    bottom: calc(10vh + 24px);
+  }
 }
