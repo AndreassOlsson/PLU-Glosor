@@ -258,6 +258,7 @@ const Question = ({
               value={selected}
               onChange={changeHandler}
               onKeyPress={handleKeyPress}
+              pattern='\d*'
               autoFocus
             ></input>
           ) : (
@@ -267,6 +268,7 @@ const Question = ({
               value={selected}
               onChange={changeHandler}
               onKeyPress={handleKeyPress}
+              pattern='\d*'
               autoFocus
             ></input>
           )}
