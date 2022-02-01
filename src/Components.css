@@ -219,11 +219,9 @@ input[type='checkbox'] {
 .fa-home {
   font-size: 2em;
   z-index: 1;
+  position: absolute;
   left: 24px;
   bottom: 24px;
-  position: fixed;
-  bottom: 0;
-  bottom: calc(1rem + env(safe-area-inset-bottom));
 }
 
 /* MOBILE */

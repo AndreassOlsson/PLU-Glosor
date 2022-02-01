@@ -253,8 +253,7 @@ a {
   .App {
     position: fixed;
     width: 100vw;
-    height: 100vh;
-    bottom: 0;
+    max-height: 100vh;
   }
   .bg1 {
     background-image: url('./img/bg1-s.svg');
@@ -269,8 +268,8 @@ a {
     height: 100vh;
     transform: scale(0.8);
     position: relative;
-    top: -5%;
-    top: calc(-12px- (env(safe-area-inset-bottom)));
+    bottom: 4%;
+    bottom: env(safe-area-inset-bottom);
   }
   .content-card-transparent {
     height: 100vh;
@@ -283,8 +282,8 @@ a {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    top: -5%;
-    top: calc(-48px- (env(safe-area-inset-bottom)));
+    bottom: 4%;
+    bottom: env(safe-area-inset-bottom);
   }
   .bg1 > .content-card-transparent {
     box-shadow: 5px 5px 25px 5px rgba(86, 141, 82, 0.2);
