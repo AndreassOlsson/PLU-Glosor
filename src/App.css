@@ -268,7 +268,7 @@ a {
     height: 100vh;
     transform: scale(0.8);
     position: relative;
-    top: -7%;
+    top: -8%;
   }
   .content-card-transparent {
     height: 100vh;
@@ -281,7 +281,7 @@ a {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    top: -7%;
+    top: -8%;
   }
   .bg1 > .content-card-transparent {
     box-shadow: 5px 5px 25px 5px rgba(86, 141, 82, 0.2);
