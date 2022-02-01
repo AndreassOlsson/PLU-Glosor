@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Data from './Data.json';
 
 import './App.css';
@@ -26,6 +26,17 @@ function App() {
   const [firstTry, setFirstTry] = useState(true);
   const [quizPassed, setQuizPassed] = useState(true);
   const [bg, setBg] = useState('bg1');
+
+  useEffect(() => {
+    const metaThemeColor = document.querySelector('meta[name=theme-color]');
+    if (bg === 'bg3') {
+      metaThemeColor.setAttribute('content', '#f44336');
+    } else if (bg === 'bg2') {
+      metaThemeColor.setAttribute('content', '#e27603');
+    } else {
+      metaThemeColor.setAttribute('content', '#02a64f');
+    }
+  }, [bg]);
 
   // Sets the batch to a random array from Data.json with the size of batchSize
   const getBatch = () => {
