@@ -30,11 +30,11 @@ function App() {
   useEffect(() => {
     const metaThemeColor = document.querySelector('meta[name=theme-color]');
     if (bg === 'bg3') {
-      metaThemeColor.setAttribute('content', '#f44336');
+      metaThemeColor.setAttribute('content', '#FEECEB');
     } else if (bg === 'bg2') {
-      metaThemeColor.setAttribute('content', '#e27603');
+      metaThemeColor.setAttribute('content', '#FCF1E5');
     } else {
-      metaThemeColor.setAttribute('content', '#02a64f');
+      metaThemeColor.setAttribute('content', '#E5F6ED');
     }
   }, [bg]);
 
