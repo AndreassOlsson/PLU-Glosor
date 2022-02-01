@@ -232,6 +232,9 @@ input[type='checkbox'] {
   .input-range-smaller .diffSelection-labels > p {
     margin: 0;
   }
+  .fa-home {
+    bottom: calc(env(safe-area-inset-bottom)+24px);
+  }
   input[type='range'] {
     width: 270px;
   }
