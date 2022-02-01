@@ -217,11 +217,13 @@ input[type='checkbox'] {
 
 /* Footer */
 .fa-home {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
   font-size: 2em;
   z-index: 1;
+  left: 24px;
+  bottom: 24px;
+  position: fixed;
+  bottom: 0;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
 }
 
 /* MOBILE */
@@ -234,9 +236,6 @@ input[type='checkbox'] {
   }
   input[type='range'] {
     width: 270px;
-  }
-  .fa-home {
-    bottom: calc(10vh + 24px);
   }
   input[type='number'] {
     -webkit-user-select: initial;

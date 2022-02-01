@@ -254,7 +254,8 @@ a {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    padding-bottom: 10vh;
+    bottom: 0;
+    bottom: env(safe-area-inset-bottom);
   }
   .bg1 {
     background-image: url('./img/bg1-s.svg');
@@ -269,20 +270,20 @@ a {
     height: 100vh;
     transform: scale(0.8);
     position: relative;
-    top: -5%;
+    top: -4%;
   }
   .content-card-transparent {
     height: 100vh;
     transform: scale(0.8);
     padding: 48px;
     border-radius: 36px;
-    backdrop-filter: brightness(1.1);
+    backdrop-filter: brightness(1.125);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    top: -5%;
+    top: -4%;
   }
   .bg1 > .content-card-transparent {
     box-shadow: 5px 5px 25px 5px rgba(86, 141, 82, 0.2);
