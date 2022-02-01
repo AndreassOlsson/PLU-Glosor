@@ -229,6 +229,9 @@ input[type='checkbox'] {
   .diffSelection-labels > p {
     margin: 0 6px;
   }
+  .input-range-smaller .diffSelection-labels > p {
+    margin: 0;
+  }
   input[type='range'] {
     width: 270px;
   }
