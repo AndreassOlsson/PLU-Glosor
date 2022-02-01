@@ -233,7 +233,9 @@ input[type='checkbox'] {
     margin: 0;
   }
   .fa-home {
-    bottom: calc(env(safe-area-inset-bottom)+24px);
+    position: absolute;
+    left: 24px;
+    bottom: calc(24px + env(safe-area-inset-bottom));
   }
   input[type='range'] {
     width: 270px;
