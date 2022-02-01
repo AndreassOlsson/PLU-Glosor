@@ -27,6 +27,7 @@ function App() {
   const [quizPassed, setQuizPassed] = useState(true);
   const [bg, setBg] = useState('bg1');
 
+  // Dynamically change theme-color Meta tag
   useEffect(() => {
     const metaThemeColor = document.querySelector('meta[name=theme-color]');
     if (bg === 'bg3') {
