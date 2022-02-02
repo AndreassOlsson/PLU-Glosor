@@ -284,7 +284,7 @@ a {
 
     position: fixed;
     bottom: 0%;
-    bottom: calc(4% + env(safe-area-inset-bottom));
+    bottom: calc(4% - env(safe-area-inset-bottom));
   }
   .content-card-transparent {
     height: 100vh;
@@ -302,7 +302,7 @@ a {
     */
     position: fixed;
     bottom: 0%;
-    bottom: calc(4% + env(safe-area-inset-bottom));
+    bottom: calc(4% - env(safe-area-inset-bottom));
   }
   .bg1 > .content-card-transparent {
     box-shadow: 5px 5px 25px 5px rgba(86, 141, 82, 0.2);
