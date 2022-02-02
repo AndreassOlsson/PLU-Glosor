@@ -94,7 +94,7 @@ function QuestionChanger({
                 }
                 onClick={() => setLocalDiff(1)}
               >
-                Nybörjare
+                AMATÖR
               </p>
               <p
                 className={
@@ -104,7 +104,7 @@ function QuestionChanger({
                 }
                 onClick={() => setLocalDiff(2)}
               >
-                JIHAD
+                VETERAN
               </p>
               <p
                 className={
@@ -114,7 +114,7 @@ function QuestionChanger({
                 }
                 onClick={() => setLocalDiff(3)}
               >
-                BANGBANG
+                PLU-GENI
               </p>
             </div>
           </div>

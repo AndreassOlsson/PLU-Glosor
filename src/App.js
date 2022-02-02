@@ -192,7 +192,7 @@ function App() {
           wrongAnswers={wrongAnswers}
         />
       )}
-      <Footer onReset={resetClickHandler} />
+      <Footer onReset={resetClickHandler} bg={bg} />
     </div>
   );
 }

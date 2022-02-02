@@ -41,7 +41,7 @@ const Start = ({
             }
             onClick={() => onSetDifficulty(1)}
           >
-            Nybörjare
+            AMATÖR
           </p>
           <p
             className={
@@ -51,7 +51,7 @@ const Start = ({
             }
             onClick={() => onSetDifficulty(2)}
           >
-            JIHAD
+            VETERAN
           </p>
           <p
             className={
@@ -61,7 +61,7 @@ const Start = ({
             }
             onClick={() => onSetDifficulty(3)}
           >
-            BANGBANG
+            PLU-GENI
           </p>
         </div>
       </div>
