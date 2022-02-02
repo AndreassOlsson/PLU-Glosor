@@ -262,7 +262,9 @@ a {
   .App {
     position: fixed;
     width: 100vw;
-    max-height: calc(100vh - env(safe-inset-area-bottom));
+
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
+    max-height: calc(100vh - (var(--safe-area-inset-bottom)));
   }
   .bg1 {
     background-image: url('./img/bg1-s.svg');
