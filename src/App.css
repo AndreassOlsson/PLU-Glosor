@@ -276,8 +276,15 @@ a {
   .content-standard {
     height: 100vh;
     transform: scale(0.8);
-    position: relative;
+
+    /*
+    position:relative;
     top: -8%;
+    */
+
+    position: fixed;
+    bottom: 3%;
+    bottom: calc(3% + env(safe-area-inset-bottom));
   }
   .content-card-transparent {
     height: 100vh;
@@ -289,8 +296,13 @@ a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    /*
+    position:relative;
     top: -8%;
+    */
+    position: fixed;
+    bottom: 3%;
+    bottom: calc(3% + env(safe-area-inset-bottom));
   }
   .bg1 > .content-card-transparent {
     box-shadow: 5px 5px 25px 5px rgba(86, 141, 82, 0.2);
