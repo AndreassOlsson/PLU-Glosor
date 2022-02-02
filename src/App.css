@@ -262,7 +262,7 @@ a {
   .App {
     position: fixed;
     width: 100vw;
-    max-height: 100vh;
+    max-height: calc(100vh - env(safe-inset-area-bottom));
   }
   .bg1 {
     background-image: url('./img/bg1-s.svg');
@@ -274,16 +274,11 @@ a {
     background-image: url('./img/bg3-s.svg');
   }
   .content-standard {
-    height: 100vh;
+    height: 100%;
     transform: scale(0.8);
 
-    /*
-    position:relative;
-    top: -8%;
-    */
-
-    position: fixed;
-    bottom: calc(env(safe-area-inset-bottom) / 6 + 2%);
+    position: relative;
+    top: -2%;
   }
   .content-card-transparent {
     height: 100vh;
@@ -295,12 +290,9 @@ a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /*
-    position:relative;
-    top: -8%;
-    */
-    position: fixed;
-    bottom: calc(env(safe-area-inset-bottom) / 6 + 2%);
+
+    position: relative;
+    top: -2%;
   }
   .bg1 > .content-card-transparent {
     box-shadow: 5px 5px 25px 5px rgba(86, 141, 82, 0.2);
