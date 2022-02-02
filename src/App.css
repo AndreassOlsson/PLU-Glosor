@@ -259,12 +259,15 @@ a {
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
+  html {
+    height: -webkit-fill-available;
+  }
   .App {
     position: fixed;
     width: 100vw;
 
-    --safe-area-inset-bottom: env(safe-area-inset-bottom);
-    max-height: calc(100vh - (var(--safe-area-inset-bottom)));
+    max-height: 100vh;
+    max-height: -webkit-fill-available;
   }
   .bg1 {
     background-image: url('./img/bg1-s.svg');
