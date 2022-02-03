@@ -15,12 +15,14 @@
 
   --error: #f44336;
   --error-dark: #c02116;
+  --error-light-ish: rgb(255, 121, 113);
   --error-light: #f89d96;
   --error-lighter: #f5cdca;
 
   --warning: #e27603;
   --warning-dark: #ff8a04;
-  --warning-darker: #966010;
+  --warning-darker: #9b5000;
+  --warning-light: #ffae58;
 
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
@@ -175,6 +177,9 @@ span {
   cursor: pointer;
   font-weight: bold;
 }
+.btn-contained:hover {
+  background-color: var(--primary-light);
+}
 .btn-outlined {
   font-size: 1.1em;
   height: 45px;
@@ -191,6 +196,9 @@ span {
   background-color: var(--warning);
   box-shadow: 0 6px 0px 2px var(--warning-darker);
 }
+.btn-contained-warning:hover {
+  background-color: var(--warning-light);
+}
 .btn-outlined-warning {
   border: 3px solid var(--warning);
   box-shadow: 0 6px 0px 2px var(--warning-darker);
@@ -198,6 +206,9 @@ span {
 .btn-contained-danger {
   background-color: var(--error);
   box-shadow: 0 6px 0px 2px var(--error-dark);
+}
+.btn-contained-danger:hover {
+  background-color: var(--error-light-ish);
 }
 .btn-outlined-danger {
   border: 3px solid var(--error);
@@ -242,6 +253,24 @@ span {
 .danger-dark {
   color: var(--error-dark);
 }
+.primary.interactive:hover {
+  color: var(--primary-light);
+}
+.warning.interactive:hover {
+  color: var(--warning-light);
+}
+.danger.interactive:hover {
+  color: var(--error-light-ish);
+}
+.primary-dark.interactive:hover {
+  color: var(--primary);
+}
+.warning-dark.interactive:hover {
+  color: var(--warning);
+}
+.danger-dark.interactive:hover {
+  color: var(--error);
+}
 
 /* MISCELLANEOUS */
 i.fas,
@@ -283,7 +312,7 @@ a {
     transform: scale(0.8);
 
     position: relative;
-    top: -2%;
+    top: -3%;
   }
   .content-card-transparent {
     height: 100vh;
@@ -297,7 +326,7 @@ a {
     align-items: center;
 
     position: relative;
-    top: -2%;
+    top: -3%;
   }
   .bg1 > .content-card-transparent {
     box-shadow: 5px 5px 25px 5px rgba(86, 141, 82, 0.2);

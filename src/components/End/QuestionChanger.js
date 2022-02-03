@@ -16,7 +16,6 @@ function QuestionChanger({
   const [triggerCustomStart, setTriggerCustomStart] = useState(false);
   useEffect(() => {
     if (triggerCustomStart) {
-      onSetBg('bg1');
       onQuizStart();
     }
   }, [triggerCustomStart, onQuizStart, onSetBg]);
@@ -54,10 +53,10 @@ function QuestionChanger({
     }
   };
   const customStart = () => {
+    onSetBg('bg1');
     if (useSame) {
       onSetDifficulty(localDiff);
       onSetBatchSize(localBatchSize);
-      onSetBg('bg1');
       onRestart();
     } else {
       onSetDifficulty(localDiff);
@@ -144,8 +143,8 @@ function QuestionChanger({
             <label
               className={
                 useSame
-                  ? 'lengthSelection-label interactive'
-                  : 'lengthSelection-label interactive useSame'
+                  ? 'lengthSelection-label interactive highlight'
+                  : 'lengthSelection-label interactive useSame highlight'
               }
               htmlFor='sameQ'
               onClick={() => handleClick()}

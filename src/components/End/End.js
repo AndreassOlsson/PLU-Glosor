@@ -75,26 +75,30 @@ const End = ({
   };
 
   const handleClicksBTNContained = () => {
-    if (firstTry && quizPassed && difficulty !== 3) {
-      return () => advance();
-    } else if (firstTry && quizPassed && difficulty === 3) {
-      return () => newQuestions();
-    } else if (!firstTry && quizPassed) {
-      return () => onRestart();
-    } else if (!quizPassed) {
-      return () => onRetry();
+    if (!viewQuestionChanger) {
+      if (firstTry && quizPassed && difficulty !== 3) {
+        return () => advance();
+      } else if (firstTry && quizPassed && difficulty === 3) {
+        return () => newQuestions();
+      } else if (!firstTry && quizPassed) {
+        return () => onRestart();
+      } else if (!quizPassed) {
+        return () => onRetry();
+      }
     }
   };
   // Solve warning: "Cannot update a component from inside thhe function body of a different component"
   useEffect(() => {
-    if (firstTry && quizPassed && difficulty !== 3) {
-      onSetBg('bg1');
-    } else if (firstTry && quizPassed && difficulty === 3) {
-      onSetBg('bg1');
-    } else if (!firstTry && quizPassed) {
-      onSetBg('bg2');
-    } else if (!quizPassed) {
-      onSetBg('bg3');
+    if (!viewQuestionChanger) {
+      if (firstTry && quizPassed && difficulty !== 3) {
+        onSetBg('bg1');
+      } else if (firstTry && quizPassed && difficulty === 3) {
+        onSetBg('bg1');
+      } else if (!firstTry && quizPassed) {
+        onSetBg('bg2');
+      } else if (!quizPassed) {
+        onSetBg('bg3');
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [advance, newQuestions, onRestart, onRetry]);
