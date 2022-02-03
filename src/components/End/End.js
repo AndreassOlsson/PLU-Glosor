@@ -120,11 +120,9 @@ const End = ({
           {!firstTry && quizPassed && 'Nästan där!'}
           {!quizPassed && (
             <Fragment>
-              MÅ GUD{' '}
               <span className='highlight danger text-shadow-danger'>
-                BESTRAFFA
-              </span>{' '}
-              DIG
+                KATASTROFALT
+              </span>
             </Fragment>
           )}
         </h3>
