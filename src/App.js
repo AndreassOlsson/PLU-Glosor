@@ -39,6 +39,10 @@ function App() {
     }
   }, [bg]);
 
+  useEffect(() => {
+    window.scrollTo(0, 1);
+  }, []);
+
   // Sets the batch to a random array from Data.json with the size of batchSize
   const getBatch = () => {
     let randomIndexes = [];
