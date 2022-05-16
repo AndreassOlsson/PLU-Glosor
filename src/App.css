@@ -338,7 +338,7 @@ a {
 /* MOBILE */
 @media screen and (max-width: 600px) {
   .App {
-    height: calc(100vh + 1px);
+    min-height: calc(100vh + 10px);
   }
   .bg1 {
     background-image: url('./img/bg1-s.svg');

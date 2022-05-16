@@ -24,6 +24,10 @@ const Question = ({
   const radiosWrapper = useRef();
 
   useEffect(() => {
+    window.scrollTo(0, 5);
+  });
+
+  useEffect(() => {
     if (difficulty === 1) {
       getRandomChoices();
       const findCheckedInput =

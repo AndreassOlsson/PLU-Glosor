@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Textbox from '../Layout/Textbox';
 
 const Start = ({
@@ -7,6 +7,10 @@ const Start = ({
   onSetDifficulty,
   onPreviewCheck,
 }) => {
+  useEffect(() => {
+    window.scrollTo(0, 5);
+  });
+
   const changeHandler = (e) => {
     onSetDifficulty(e.target.valueAsNumber);
   };
