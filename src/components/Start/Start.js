@@ -8,7 +8,11 @@ const Start = ({
   onPreviewCheck,
 }) => {
   useEffect(() => {
-    window.scrollTo(0, 5);
+    let delayInMilliseconds = 1000; //1 second
+
+    setTimeout(function () {
+      window.scrollTo(0, 10);
+    }, delayInMilliseconds);
   });
 
   const changeHandler = (e) => {
