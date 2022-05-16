@@ -23,10 +23,6 @@ const End = ({
   const [correctAnswers, setcorrectAnswers] = useState(0);
 
   useEffect(() => {
-    window.scrollTo(0, 5);
-  });
-
-  useEffect(() => {
     let errors = 0;
     wrongAnswers.forEach((wrongAnswer) => {
       if (wrongAnswer !== 0) {

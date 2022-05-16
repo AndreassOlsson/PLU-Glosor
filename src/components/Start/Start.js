@@ -8,11 +8,14 @@ const Start = ({
   onPreviewCheck,
 }) => {
   useEffect(() => {
-    let delayInMilliseconds = 1000; //1 second
-
-    setTimeout(function () {
-      window.scrollTo(0, 100);
-    }, delayInMilliseconds);
+    // When ready...
+    window.addEventListener('load', function () {
+      // Set a timeout...
+      setTimeout(function () {
+        // Hide the address bar!
+        window.scrollTo(0, 1);
+      }, 0);
+    });
   });
 
   const changeHandler = (e) => {
