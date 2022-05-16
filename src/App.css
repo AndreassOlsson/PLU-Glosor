@@ -49,7 +49,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: hidden;
   background-size: cover;
   background-position: center center;
@@ -71,29 +71,47 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 80vh;
+  min-height: 100vh;
+  padding: 10vh 0;
+}
+.content-flexwrap {
+  overflow: auto;
+  display: flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 40px 120px 40px;
+  width: 80vw;
 }
 
 .content-card {
   z-index: 1;
   position: absolute;
+  top: 2vh;
+  max-height: 650px;
+  height: 92%;
+  padding: 48px;
+  padding-top: 24px;
+  border-radius: 36px;
   display: flex;
   flex-direction: column;
-  padding: 24px 54px;
-  border-radius: 36px;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--light-font);
   border: 4px solid var(--primary-dark);
   box-shadow: 0px 6px 0px 2px var(--primary-darker);
 }
 .content-card-content {
-  height: 550px;
-  width: 320px;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
+
+
 .closeBtn {
   display: flex;
   align-items: flex-end;
@@ -105,7 +123,8 @@
 
 img {
   max-width: 280px;
-  height: 220px;
+  max-height: 220px;
+  height: 25vh;
   object-fit: contain;
   padding: 12px 0;
 }
@@ -122,8 +141,14 @@ img {
   margin-bottom: 24px;
 }
 
+
 p {
   font-size: 1.25em;
+}
+.textbox p {
+  line-height: 1.8em;
+  letter-spacing: 0.075em;
+  font-weight: 500;
 }
 p.textfield {
   font-size: 1.4em;
@@ -135,6 +160,30 @@ p.textfield {
 }
 span {
   font-size: 1em;
+}
+
+.textbox, .landing-image {
+  flex: 1 1 400px;
+  max-width: 390px;
+  max-height: 240px;
+  text-align: center;
+  margin: 48px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  backdrop-filter: blur(10px);
+}
+.landing-image {
+  height: 75%;
+  width: 75%;
+  background-image: url(img/coop-vector.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 0 6px 0px 2px var(--primary-lighter);
+
 }
 
 .unordered-list {
@@ -288,16 +337,7 @@ a {
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
-  html {
-    height: -webkit-fill-available;
-  }
-  .App {
-    position: fixed;
-    width: 100vw;
 
-    max-height: 100vh;
-    max-height: -webkit-fill-available;
-  }
   .bg1 {
     background-image: url('./img/bg1-s.svg');
   }
@@ -308,26 +348,28 @@ a {
     background-image: url('./img/bg3-s.svg');
   }
   .content-standard {
-    height: 100%;
-    transform: scale(0.8);
-
-    position: relative;
-    top: -3%;
+    transform: scale(0.9);
+    justify-content: space-around;
+    padding: 4vh 0;
   }
-  .content-card-transparent {
-    height: 100vh;
-    transform: scale(0.76);
+  .content-card, .content-card-transparent {
+    position: absolute;
+    top: 4vh;
+    height: 82vh;
+    width: 90vw;
     padding: 48px;
     border-radius: 36px;
-    backdrop-filter: brightness(1.125);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
-    position: relative;
-    top: -3%;
+    backdrop-filter: brightness(1.125);    
   }
+  .content-card-content {
+    height: 100%;
+    width: 100%;
+  }
+  
   .bg1 > .content-card-transparent {
     box-shadow: 5px 5px 25px 5px rgba(86, 141, 82, 0.2);
   }
@@ -337,17 +379,8 @@ a {
   .bg3 > .content-card-transparent {
     box-shadow: 5px 5px 25px 5px rgba(214, 101, 101, 0.2);
   }
-
-  .content-card {
-    padding: 24px 54px;
-    border-radius: 36px;
-    transform: scale(0.9);
-    position: absolute;
-    top: 0%;
-  }
-  .content-card-content {
-    height: 70vh;
-    width: 60vw;
+  .btn-contained:hover {
+    background-color: var(--primary);
   }
   .closeBtn {
     width: calc(100% + 48px);
@@ -369,5 +402,12 @@ a {
     letter-spacing: 0.075em;
     font-weight: 550;
     width: 100%;
+  }
+  .content-flexwrap {
+    width: 100vw;
+  }
+  .textbox, .landing-image {
+    max-width: 370px;
+
   }
 }

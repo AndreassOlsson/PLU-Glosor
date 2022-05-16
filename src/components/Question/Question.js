@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useRef, Fragment } from 'react';
 
-import '../../App.css';
-import '../../Components.css';
-
 const Question = ({
   data,
   Data,

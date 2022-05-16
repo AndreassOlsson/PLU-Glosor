@@ -219,7 +219,7 @@ input[type='checkbox'] {
 .fa-home {
   font-size: 2em;
   z-index: 1;
-  position: absolute;
+  position: fixed;
   left: 24px;
   bottom: 24px;
 }
@@ -233,9 +233,8 @@ input[type='checkbox'] {
     margin: 0;
   }
   .fa-home {
-    position: absolute;
     left: 12px;
-    bottom: 12px;
+    bottom: 18px;
   }
   input[type='range'] {
     width: 270px;

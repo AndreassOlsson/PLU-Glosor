@@ -10,7 +10,7 @@ import End from './components/End/End';
 import Preview from './components/Start/Preview';
 import Result from './components/End/Result';
 
-import Footer from './components/Footer';
+import Footer from './components/Layout/Footer';
 
 function App() {
   const [step, setStep] = useState(1);
