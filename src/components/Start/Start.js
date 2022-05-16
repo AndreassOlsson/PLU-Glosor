@@ -11,7 +11,7 @@ const Start = ({
     let delayInMilliseconds = 1000; //1 second
 
     setTimeout(function () {
-      window.scrollTo(0, 10);
+      window.scrollTo(0, 100);
     }, delayInMilliseconds);
   });
 
