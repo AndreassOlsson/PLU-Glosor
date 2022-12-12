@@ -7,11 +7,6 @@ It features 3 difficulty stages and requires you to redo your errors and repeat 
 ![image](https://user-images.githubusercontent.com/59232492/207045080-2f688bb9-c5d3-439c-9f3c-a92816296d7a.png)
 ![image](https://user-images.githubusercontent.com/59232492/207045168-ac268f9d-2136-4157-8487-546b85600a07.png)
 ![image](https://user-images.githubusercontent.com/59232492/207045665-e6e24a35-2bfb-44c1-9204-4b8779f2c44a.png)
-
-
-
-![image](https://user-images.githubusercontent.com/59232492/207044280-6818954b-a57c-423b-88ec-e1de292428b8.png)
-![image](https://user-images.githubusercontent.com/59232492/207044463-e3c5be4e-2750-44b8-bc97-509b96f6d750.png)
 ![image](https://user-images.githubusercontent.com/59232492/207044530-e7bba622-3101-4964-bc76-82eddbfc19f0.png)
 ![image](https://user-images.githubusercontent.com/59232492/207044598-d00fb6d7-2fcd-4846-8d43-e06f1a74e8f1.png)
 ![image](https://user-images.githubusercontent.com/59232492/207044660-d0e24f01-a47e-41d3-b0fb-3b48931cc6e8.png)
